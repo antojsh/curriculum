@@ -13,9 +13,12 @@ Author: themehippo.com
 # Theme Color (link color) #82b541
 # Mid grey (sub header) #f4f4f4
 # -------------------------------------------------------------------*/
-
+@font-face {
+    font-family: Antonio;
+    src: url(../fonts/droid-sans-mono/DroidSansMono.ttf);
+}
 body {
-    font-family : 'Hind', sans-serif;
+    font-family : Antonio, sans-serif;
     font-size   : 15px;
     line-height : 1.8em;
     color       : #3d3d50;
@@ -538,32 +541,18 @@ button:focus,
  * Preloader
 /* ---------------------------------------------- */
 #preloader {
-    background : rgba(255, 255, 255,.8);
+    background : rgba(255, 255, 255,.9);
     bottom     : 0;
     left       : 0;
     position   : fixed;
     right      : 0;
     top        : 0;
     z-index    : 9999;
-    }
+    display    : flex;
+    justify-content: center;
+    align-items: center;
+}
 
-#status,
-.status-mes {
-    background-image    : url(../img/preloader.svg);
-    background-position : center;
-    background-repeat   : no-repeat;
-    height              : 200px;
-    left                : 50%;
-    margin              : -100px 0 0 -100px;
-    position            : absolute;
-    top                 : 50%;
-    width               : 200px;
-    }
-
-.status-mes {
-    background : none;
-    left       : 0;
-    margin     : 0;
-    text-align : center;
-    top        : 65%;
-    }
+#preloader p{
+    font-size: 5em;
+}
